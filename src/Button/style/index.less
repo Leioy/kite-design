@@ -1,0 +1,68 @@
+@import "../../style/index";
+@import "../../style/variable";
+
+@button-line-height: @line-height-base;
+@button-prefix-cls: ~'@{prefixClass}-btn';
+.@{button-prefix-cls} {
+  display: inline-block;
+  padding: 0 16px;
+  height: @button-height-default;
+  line-height: @button-line-height;
+  position: relative;
+  outline: none;
+  background: #colors[default];
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 2px;
+  white-space: nowrap;
+  font-weight: 400;
+  &-primary {
+    color: @color-white;
+    background: #colors[primary];
+  }
+  &-secondary {
+    color: @color-white;
+    background: #colors[secondary];
+  }
+  &-success {
+    color: @color-white;
+    background: #colors[success];
+  }
+  &-warning {
+    color: @color-white;
+    background: #colors[warning];
+  }
+  &-danger {
+    color: @color-white;
+    background: #colors[danger];
+  }
+  &-lg {
+    height: @button-height-large;
+  }
+  &-sm {
+    height: @button-height-small;
+  }
+  &-round {
+    border-radius: @button-height-default;
+    &.@{button-prefix-cls}-lg {
+      border-radius: @button-height-large;
+    }
+    &.@{button-prefix-cls}-sm {
+      border-radius: @button-height-small;
+    }
+  }
+  &-circle {
+    padding-left: 0;
+    padding-right: 0;
+    min-width: @button-height-default;
+    border-radius: 50%;
+    &.@{button-prefix-cls}-lg {
+      min-width: @button-height-large;
+    }
+    &.@{button-prefix-cls}-sm {
+      min-width: @button-height-small;
+    }
+  }
+}

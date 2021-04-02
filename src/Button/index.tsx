@@ -1,6 +1,2 @@
-import React from 'react';
-
-const Button = () =>{
-  return <button>click</button>
-}
+import Button from '@/Button/button';
 export default Button
