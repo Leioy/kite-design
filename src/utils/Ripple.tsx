@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback } from 'react';
 import { useTransition, animated, config } from 'react-spring';
+import { ButtonColor, ButtonVariant } from '@/Button/button';
 
 interface Coordinate {
   x: number;
@@ -35,13 +36,40 @@ const getRippleRadius = (origin: Coordinate, rect: ClientRect) => {
   );
 };
 
-interface Props {}
+interface Props {
+  color: ButtonColor;
+  variant: ButtonVariant;
+}
 
-const Ripple: React.FC<Props> = () => {
+const Ripple: React.FC<Props> = props => {
+  const { color, variant } = props;
+  const getRippleBackground = () => {
+    enum BackGround {
+      default = '#525050',
+      primary = '#1976d2',
+      secondary = '#dc004e',
+      success = '#18821c',
+      warning = '#d27e15',
+      danger = '#cc2b2b',
+    }
+
+    enum ContainedBackGround {
+      default = '#525050',
+      primary = '#fff',
+      secondary = '#fff',
+      success = '#fff',
+      warning = '#fff',
+      danger = '#fff',
+    }
+
+    return variant === 'contained'
+      ? ContainedBackGround[color]
+      : BackGround[color];
+  };
   const ref = useRef<HTMLDivElement>(null);
-  const [ visible, setVisible ] = useState(false);
-  const [ { x, y }, setPosition ] = useState({ x: 0, y: 0 });
-  const [ size, setSize ] = useState(0);
+  const [visible, setVisible] = useState(false);
+  const [{ x, y }, setPosition] = useState({ x: 0, y: 0 });
+  const [size, setSize] = useState(0);
   const ignoreMouseEvents = useRef(false);
 
   const start = useCallback(
@@ -67,7 +95,7 @@ const Ripple: React.FC<Props> = () => {
       setSize(getRippleRadius({ x: clientX, y: clientY }, rect) * 2);
       setVisible(true);
     },
-    [ setPosition, setSize, setVisible ],
+    [setPosition, setSize, setVisible],
   );
 
   const stop = () => setVisible(false);
@@ -123,7 +151,7 @@ const Ripple: React.FC<Props> = () => {
               style={{
                 transformOrigin: '50% 50%',
                 position: 'absolute',
-                backgroundColor: '#fff',
+                backgroundColor: getRippleBackground(),
                 borderRadius: '50%',
                 pointerEvents: 'none',
                 userSelect: 'none',

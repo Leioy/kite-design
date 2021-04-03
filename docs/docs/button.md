@@ -1,46 +1,174 @@
 # Button
 
-## 按钮类型
+## 实心按钮
 
 ```jsx
 import React from 'react';
-import { Button } from 'kite-design'
+import { Button } from 'kite-design';
 
-export default () => <>
-  <Button>DEFAULT</Button>
-  <Button type="primary">PRIMARY</Button>
-  <Button type="secondary">SECONDARY</Button>
-  <Button type="success">SUCCESS</Button>
-  <Button type="warning">WARNING</Button>
-  <Button type="danger">DANGER</Button>
-</>
+export default () => (
+  <>
+    <Button style={{ marginRight: '8px' }}>DEFAULT</Button>
+    <Button style={{ marginRight: '8px' }} color="primary">
+      PRIMARY
+    </Button>
+    <Button style={{ marginRight: '8px' }} color="secondary">
+      SECONDARY
+    </Button>
+    <Button style={{ marginRight: '8px' }} color="success">
+      SUCCESS
+    </Button>
+    <Button style={{ marginRight: '8px' }} color="warning">
+      WARNING
+    </Button>
+    <Button style={{ marginRight: '8px' }} color="danger">
+      DANGER
+    </Button>
+    <Button color="primary" disabled>
+      DISABLED
+    </Button>
+  </>
+);
+```
+
+## 描边按钮
+
+```jsx
+import React from 'react';
+import { Button } from 'kite-design';
+
+export default () => (
+  <>
+    <Button style={{ marginRight: '8px' }} variant="outlined">
+      DEFAULT
+    </Button>
+    <Button style={{ marginRight: '8px' }} variant="outlined" color="primary">
+      PRIMARY
+    </Button>
+    <Button style={{ marginRight: '8px' }} variant="outlined" color="secondary">
+      SECONDARY
+    </Button>
+    <Button style={{ marginRight: '8px' }} variant="outlined" color="success">
+      SUCCESS
+    </Button>
+    <Button style={{ marginRight: '8px' }} variant="outlined" color="warning">
+      WARNING
+    </Button>
+    <Button style={{ marginRight: '8px' }} variant="outlined" color="danger">
+      DAGNER
+    </Button>
+    <Button color="primary" variant="outlined" disabled>
+      DISABLED
+    </Button>
+  </>
+);
+```
+
+## 文本按钮
+
+```jsx
+import React from 'react';
+import { Button } from 'kite-design';
+import { Alipay } from '@kite-design/icons-react';
+
+export default () => (
+  <>
+    <Button style={{ marginRight: '8px' }} variant="text">
+      DEFAULT
+    </Button>
+    <Button
+      style={{ marginRight: '8px' }}
+      variant="text"
+      color="primary"
+      icon={<Alipay />}
+    >
+      PRIMARY
+    </Button>
+    <Button style={{ marginRight: '8px' }} variant="text" color="secondary">
+      SECONDARY
+    </Button>
+    <Button style={{ marginRight: '8px' }} variant="text" color="success">
+      SUCCESS
+    </Button>
+    <Button style={{ marginRight: '8px' }} variant="text" color="warning">
+      WARNING
+    </Button>
+    <Button style={{ marginRight: '8px' }} variant="text" color="danger">
+      DAGNER
+    </Button>
+    <Button color="primary" variant="text" disabled>
+      DISABLED
+    </Button>
+  </>
+);
 ```
 
 ## 按钮大小
 
 ```jsx
-import React from 'react'
-import { Button } from 'kite-design'
+import React from 'react';
+import { Button } from 'kite-design';
 
-export default () => <>
-  <Button size='small'>SMALL</Button>
-  <Button>MiDDLE</Button>
-  <Button size='large'>LARGE</Button>
-</>
+export default () => (
+  <>
+    <Button style={{ marginRight: '8px' }} size="small" color="primary">
+      SMALL
+    </Button>
+    <Button style={{ marginRight: '8px' }} color="primary">
+      MiDDLE
+    </Button>
+    <Button style={{ marginRight: '8px' }} size="large" color="primary">
+      LARGE
+    </Button>
+  </>
+);
 ```
 
 ## 按钮形状-圆形按钮
 
 ```jsx
 import React from 'react';
-import { Button } from 'kite-design'
-import { Apple } from '@kite-design/icons-react'
+import { Button } from 'kite-design';
+import { Apple } from '@kite-design/icons-react';
 
-export default () => <>
-  <Button shape='circle' type='primary' icon={<Apple />} />
-  <Button shape='circle' type='primary' size='small' icon={<Apple />} />
-  <Button shape='circle' type='primary' size='large' icon={<Apple />} />
-</>
+export default () => (
+  <>
+    <Button
+      style={{ marginRight: '8px' }}
+      shape="circle"
+      color="primary"
+      icon={<Apple />}
+    />
+    <Button
+      style={{ marginRight: '8px' }}
+      shape="circle"
+      color="secondary"
+      size="small"
+      icon={<Apple />}
+    />
+    <Button
+      style={{ marginRight: '8px' }}
+      shape="circle"
+      color="success"
+      size="large"
+      icon={<Apple />}
+    />
+    <Button
+      style={{ marginRight: '8px' }}
+      shape="circle"
+      color="warning"
+      size="large"
+      icon={<Apple />}
+    />
+    <Button
+      style={{ marginRight: '8px' }}
+      shape="circle"
+      color="danger"
+      size="large"
+      icon={<Apple />}
+    />
+  </>
+);
 ```
 
 ## 按钮形状-圆角按钮
@@ -49,30 +177,110 @@ export default () => <>
 import React from 'react';
 import { Button } from 'kite-design';
 
-export default () => <>
-  <Button shape='round' type='primary'>ROUND</Button>
-  <Button shape='round' type='primary' size='small'>ROUND</Button>
-  <Button shape='round' type='primary' size='large'>ROUND</Button>
-</>
+export default () => (
+  <>
+    <Button style={{ marginRight: '8px' }} variant="outlined" shape="round">
+      DEFAULT
+    </Button>
+    <Button
+      style={{ marginRight: '8px' }}
+      variant="outlined"
+      shape="round"
+      color="primary"
+    >
+      PRIMARY
+    </Button>
+    <Button
+      style={{ marginRight: '8px' }}
+      variant="outlined"
+      shape="round"
+      color="secondary"
+    >
+      SECONDARY
+    </Button>
+    <Button
+      style={{ marginRight: '8px' }}
+      variant="outlined"
+      shape="round"
+      color="success"
+    >
+      SUCCESS
+    </Button>
+    <Button
+      style={{ marginRight: '8px' }}
+      variant="outlined"
+      shape="round"
+      color="warning"
+    >
+      WARNING
+    </Button>
+    <Button
+      style={{ marginRight: '8px' }}
+      variant="outlined"
+      shape="round"
+      color="danger"
+    >
+      DAGNER
+    </Button>
+  </>
+);
+```
+
+## 图标按钮
+
+```jsx
+import React, { useState } from 'react';
+import { Button } from 'kite-design';
+import { Alipay, Loading } from '@kite-design/icons-react';
+
+export default () => {
+  const [loading, setLoading] = useState(false);
+  setTimeout(() => {
+    setLoading(false);
+  }, 6000);
+  return (
+    <>
+      <Button
+        style={{ marginRight: '8px' }}
+        icon={<Alipay />}
+        loading={loading}
+        onClick={e => {
+          console.log('click', e);
+          setLoading(true);
+        }}
+      >
+        编辑
+      </Button>
+      <Button icon={<Loading />}></Button>
+    </>
+  );
+};
 ```
 
 ## 加载中
 
 ```jsx
 import React, { useState } from 'react';
-import { Button } from 'kite-design'
+import { Button } from 'kite-design';
 
 export default () => {
-  // const [ loading, setLoading ] = useState(false)
-  const [ loadingDelay, setLoadingDelay ] = useState(false)
+  const [loadingDelay, setLoadingDelay] = useState(false);
   setTimeout(() => {
-    // setLoading(false)
-    setLoadingDelay(false)
-  }, 5000)
-  return <>
-    <Button loading type='primary'>click me</Button>
-    {/*<Button loading={loading} type='primary' onClick={() => setLoading(true)}>click me</Button>*/}
-    <Button loading={loadingDelay} type='primary' onClick={() => setLoadingDelay({ delay: 1000 })}>click me</Button>
-  </>
-}
+    setLoadingDelay(false);
+  }, 5000);
+  return (
+    <>
+      <Button style={{ marginRight: '8px' }} loading color="primary">
+        click me
+      </Button>
+      <Button
+        loading={loadingDelay}
+        color="primary"
+        onClick={() => setLoadingDelay({ delay: 1000 })}
+      >
+        click me
+      </Button>
+    </>
+  );
+};
 ```

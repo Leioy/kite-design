@@ -1,5 +1,5 @@
-@import "../../style/index";
-@import "../../style/variable";
+@import '../../style/index';
+@import '../../style/variable';
 
 @button-line-height: @line-height-base;
 @button-prefix-cls: ~'@{prefixClass}-btn';
@@ -10,35 +10,153 @@
   line-height: @button-line-height;
   position: relative;
   outline: none;
-  background: #colors[default];
   border: none;
   font-size: 14px;
   cursor: pointer;
   text-align: center;
   border-radius: 2px;
   white-space: nowrap;
-  font-weight: 400;
-  &-primary {
-    color: @color-white;
-    background: #colors[primary];
+  font-weight: 500;
+  overflow: hidden;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  &-contained {
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+      0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    &.@{button-prefix-cls}-default {
+      color: @color-black;
+      background: #colors[default];
+      &:hover {
+        background: #colors[default-heavy];
+      }
+    }
+    &.@{button-prefix-cls}-primary {
+      color: @color-white;
+      background: #colors[primary];
+      &:hover {
+        background: #colors[primary-heavy];
+      }
+    }
+    &.@{button-prefix-cls}-secondary {
+      color: @color-white;
+      background: #colors[secondary];
+      &:hover {
+        background: #colors[secondary-heavy];
+      }
+    }
+    &.@{button-prefix-cls}-success {
+      color: @color-white;
+      background: #colors[success];
+      &:hover {
+        background: #colors[success-heavy];
+      }
+    }
+    &.@{button-prefix-cls}-warning {
+      color: @color-white;
+      background: #colors[warning];
+      &:hover {
+        background: #colors[warning-heavy];
+      }
+    }
+    &.@{button-prefix-cls}-danger {
+      color: @color-white;
+      background: #colors[danger];
+      &:hover {
+        background: #colors[danger-heavy];
+      }
+    }
+    &[disabled] {
+      background: #colors[default];
+      color: @color-disabled;
+      box-shadow: none;
+      cursor: not-allowed;
+      &:hover {
+        background: #colors[default];
+      }
+    }
   }
-  &-secondary {
-    color: @color-white;
-    background: #colors[secondary];
+  &-outlined {
+    border: 1px solid @color-black;
+    background: @color-white;
+    &.@{button-prefix-cls}-default {
+      color: @color-black;
+      border-color: #colors[default-heavy];
+    }
+    &.@{button-prefix-cls}-primary {
+      color: #colors[primary];
+      border-color: $color;
+      &:hover {
+        border-color: #colors[primary-heavy];
+      }
+    }
+    &.@{button-prefix-cls}-secondary {
+      color: #colors[secondary];
+      border-color: $color;
+      &:hover {
+        border-color: #colors[secondary-heavy];
+      }
+    }
+    &.@{button-prefix-cls}-success {
+      color: #colors[success];
+      border-color: $color;
+      &:hover {
+        border-color: #colors[success-heavy];
+      }
+    }
+    &.@{button-prefix-cls}-warning {
+      color: #colors[warning];
+      border-color: $color;
+      &:hover {
+        border-color: #colors[warning-heavy];
+      }
+    }
+    &.@{button-prefix-cls}-danger {
+      color: #colors[danger];
+      border-color: $color;
+      &:hover {
+        border-color: #colors[danger-heavy];
+      }
+    }
+    &[disabled] {
+      background: @color-white;
+      border-color: #colors[default];
+      color: @color-disabled;
+      box-shadow: none;
+      cursor: not-allowed;
+      &:hover {
+        border-color: #colors[default];
+      }
+    }
   }
-  &-success {
-    color: @color-white;
-    background: #colors[success];
-  }
-  &-warning {
-    color: @color-white;
-    background: #colors[warning];
-  }
-  &-danger {
-    color: @color-white;
-    background: #colors[danger];
+  &-text {
+    &.@{button-prefix-cls}-default {
+      color: @color-black;
+    }
+    &.@{button-prefix-cls}-primary {
+      color: #colors[primary];
+    }
+    &.@{button-prefix-cls}-secondary {
+      color: #colors[secondary];
+    }
+    &.@{button-prefix-cls}-success {
+      color: #colors[success];
+    }
+    &.@{button-prefix-cls}-warning {
+      color: #colors[warning];
+    }
+    &.@{button-prefix-cls}-danger {
+      color: #colors[danger];
+    }
+    &[disabled] {
+      background: @color-white;
+      color: @color-disabled;
+      box-shadow: none;
+      cursor: not-allowed;
+    }
   }
   &-lg {
+    padding: 0 25px;
     height: @button-height-large;
   }
   &-sm {
@@ -64,5 +182,28 @@
     &.@{button-prefix-cls}-sm {
       min-width: @button-height-small;
     }
+  }
+  &&-loading {
+    pointer-events: none;
+    &::before {
+      display: block;
+      content: '';
+      position: absolute;
+      background: #fff;
+      top: -1px;
+      right: -1px;
+      bottom: -1px;
+      left: -1px;
+      opacity: 0.35;
+      border-radius: inherit;
+      transition: opacity 0.2s;
+      pointer-events: none;
+    }
+  }
+  &-loading-icon {
+    margin-right: 8px;
+  }
+  > .kiteicon + span {
+    margin-left: 8px;
   }
 }

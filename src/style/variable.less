@@ -1,20 +1,19 @@
 @prefixClass: kite;
 @color-white: #fff;
-@color-primary: #2196f3;
-@color-secondary: #ec407a;
-@color-success: #4caf50;
-@color-warning: #fb8c00;
-@color-danger: #ff5252;
-@color-black-bg: #242424;
-@color-black: rgba(0, 0, 0, 0.65);
-@color-black-light: rgba(0, 0, 0, 0.38);
-@color-black-heavy: rgba(0, 0, 0, 0.85);
-@color-gray: #e0e0e0;
-@color-gray-heavy: #8c8c8c;
-@color-disabled: rgba(0, 0, 0, 0.26);
-
-@button-background-disable: rgba(0, 0, 0, 0.12);
-@button-background-loading: #d6d8db;
+@color-black: #1d1d1d;
+@color-default: #e0e0e0;
+@color-default-heavy: darken(@color-default, 10%);
+@color-primary: #1976d2;
+@color-primary-heavy: darken(@color-primary, 10%);
+@color-secondary: #dc004e;
+@color-secondary-heavy: darken(@color-secondary, 10%);
+@color-success: #18821c;
+@color-success-heavy: darken(@color-success, 10%);
+@color-warning: #d27e15;
+@color-warning-heavy: darken(@color-warning, 10%);
+@color-danger: #cc2b2b;
+@color-danger-heavy: darken(@color-danger, 10%);
+@color-disabled: #a6a6a6;
 @button-height-default: 32px;
 @button-height-small: 24px;
 @button-height-large: 40px;
@@ -22,11 +21,16 @@
 @line-height-base: 1.5715;
 
 #colors() {
-  default: @color-gray;
+  default: @color-default;
+  default-heavy: @color-default-heavy;
   primary: @color-primary;
+  primary-heavy: @color-primary-heavy;
   secondary: @color-secondary;
+  secondary-heavy: @color-secondary-heavy;
   success: @color-success;
+  success-heavy: @color-success-heavy;
   warning: @color-warning;
+  warning-heavy: @color-warning-heavy;
   danger: @color-danger;
+  danger-heavy: @color-danger-heavy;
 }
-
