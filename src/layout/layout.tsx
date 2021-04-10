@@ -23,6 +23,7 @@ export interface IBasicProps extends HTMLAttributes<HTMLDivElement> {
   prefixClass?: string
 }
 
+
 export interface IBasicPropsWithTagName extends IBasicProps {
   tagName: TTagName
   ref: React.Ref<HTMLDivElement>

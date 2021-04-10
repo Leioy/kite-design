@@ -33,6 +33,7 @@ enum Breakpoint {
   xxl = '1600px',
 }
 
+
 const breakpoints = tuple('xs', 'sm', 'md', 'lg', 'xl', 'xxl');
 export type TBreakpoint = typeof breakpoints[number]
 
@@ -65,7 +66,7 @@ const Sider = React.forwardRef<HTMLDivElement, ISiderProps>((props, ref) => {
     let mql: MediaQueryList;
     if (typeof window !== 'undefined') {
       const { matchMedia } = window;
-      if (matchMedia && breakpoint) {
+      if (breakpoint && breakpoint in Breakpoint) {
         mql = matchMedia(`(max-width: ${Breakpoint[breakpoint]})`);
         try {
           mql.addEventListener('change', responsiveHandler);

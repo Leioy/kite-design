@@ -1,7 +1,7 @@
 @import "../../style/index";
 @import '../../style/variable';
 
-@layout-prefix-cls: ~'.@{prefixClass}-layout';
+@layout-prefix-cls: ~'@{prefixClass}-layout';
 .@{layout-prefix-cls} {
   display: flex;
   flex: auto;
@@ -9,5 +9,17 @@
   &-header {
     height: 64px;
     line-height: 64px;
+  }
+  &-content {
+    flex: auto;
+  }
+  &-footer {
+    padding: 24px 50px;
+  }
+  &.@{layout-prefix-cls}-hasSider {
+    flex-direction: row;
+    .@{layout-prefix-cls}-content {
+      overflow: hidden;
+    }
   }
 }
