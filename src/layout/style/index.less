@@ -1,0 +1,13 @@
+@import "../../style/index";
+@import '../../style/variable';
+
+@layout-prefix-cls: ~'.@{prefixClass}-layout';
+.@{layout-prefix-cls} {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  &-header {
+    height: 64px;
+    line-height: 64px;
+  }
+}

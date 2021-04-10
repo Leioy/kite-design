@@ -1,6 +1,5 @@
 import React, {
   ButtonHTMLAttributes,
-  FC,
   useEffect,
   useRef,
   useState,
@@ -8,9 +7,8 @@ import React, {
 import { tuple } from '@/utils/type';
 import { getPrefixClass } from '@/utils/getPrefixClass';
 import clsx from 'clsx';
-import './style/index.less';
 import Ripple from '@/utils/Ripple';
-import LoadingIcon from '@/Button/LoadingIcon';
+import LoadingIcon from '@/button/LoadingIcon';
 
 const ButtonColors = tuple(
   'default',
@@ -63,8 +61,7 @@ const Button = React.forwardRef<HTMLButtonElement, NativeButtonProps>(
       onClick,
       ...rest
     } = props;
-    const [innerLoading, setLoading] = useState<Loading>(!!loading);
-    const buttonRef = useRef<HTMLButtonElement | null>(null);
+    const [innerLoading, setLoading] = useState<Loading>(Boolean(loading));
     const delayRef = useRef<number>();
     const prefixClass = getPrefixClass('btn');
     let sizeClass = '';

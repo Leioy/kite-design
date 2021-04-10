@@ -1,3 +1,11 @@
+---
+title: button
+nav:
+  path: /docs
+group:
+  title: 通用
+  path: /components
+--- 
 # Button
 
 ## 实心按钮
@@ -284,3 +292,4 @@ export default () => {
   );
 };
 ```
+

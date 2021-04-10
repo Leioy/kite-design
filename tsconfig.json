@@ -8,10 +8,12 @@
     "esModuleInterop": true,
     "sourceMap": true,
     "baseUrl": "./",
+    "declaration": true,
     "strict": true,
     "paths": {
       "@/*": ["src/*"],
-      "@@/*": ["src/.umi/*"]
+      "@@/*": ["src/.umi/*"],
+      "kite-design": ["./src"]
     },
     "allowSyntheticDefaultImports": true
   },

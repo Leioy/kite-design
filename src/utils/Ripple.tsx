@@ -1,6 +1,6 @@
 import React, { useState, useRef, useCallback } from 'react';
 import { useTransition, animated, config } from 'react-spring';
-import { ButtonColor, ButtonVariant } from '@/Button/button';
+import { ButtonColor, ButtonVariant } from '@/button/button';
 
 interface Coordinate {
   x: number;
