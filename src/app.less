@@ -1,0 +1,41 @@
+@import "button/style/index";
+@import "./layout/style/index";
+
+.__dumi-default-layout-content {
+  color: #fff;
+  section + section {
+    margin-top: 48px;
+  }
+  section {
+    text-align: center;
+    overflow: hidden;
+    aside {
+      flex: 0 0 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #108ee9;
+    }
+    header, footer {
+      background-color: #6ec6ff;
+    }
+    main {
+      min-height: 120px;
+      line-height: 120px;
+      background-color: #2196f3;
+    }
+  }
+  .markdown {
+    table {
+      text-align: left;
+      tbody tr td:first-child {
+        color: #0069c0;
+      }
+    }
+  }
+  .kite-btn {
+    & + {
+      margin-right: 8px;
+    }
+  }
+}
