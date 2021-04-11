@@ -1,0 +1,48 @@
+.make-grid(@class: ~'') {
+  .loop-grid-columns(@grid-columns, @class)
+}
+
+.loop-grid-columns(@index, @class) when (@index > 0) {
+  .@{prefixClass}-col@{class}-@{index} {
+    display: block;
+    flex: 0 0 percentage((@index / @grid-columns));
+    max-width: percentage((@index / @grid-columns));
+  }
+  .@{prefixClass}-col@{class}-push-@{index} {
+    left: percentage((@index / @grid-columns));
+  }
+  .@{prefixClass}-col@{class}-pull-@{index} {
+    right: percentage((@index / @grid-columns));
+  }
+  .@{prefixClass}-col@{class}-offset-@{index} {
+    margin-left: percentage((@index / @grid-columns));
+  }
+  .@{prefixClass}-col@{class}-order-@{index} {
+    order: @index;
+  }
+  .loop-grid-columns((@index - 1), @class);
+}
+
+.loop-grid-columns(@index, @class) when (@index = 0) {
+  .@{prefixClass}-col@{class}-@{index} {
+    display: none;
+  }
+  .@{prefixClass}-col-push-@{index} {
+    left: auto;
+  }
+  .@{prefixClass}-col-pull-@{index} {
+    right: auto;
+  }
+  .@{prefixClass}-col@{class}-push-@{index} {
+    left: auto;
+  }
+  .@{prefixClass}-col@{class}-pull-@{index} {
+    right: auto;
+  }
+  .@{prefixClass}-col@{class}-offset-@{index} {
+    margin-left: 0;
+  }
+  .@{prefixClass}-col@{class}-order-@{index} {
+    order: 0;
+  }
+}

@@ -14,7 +14,8 @@ function getMenus (base = '/docs') {
         title: '通用',
         children: [
           '/docs/button',
-          '/docs/layout'
+          '/docs/layout',
+          '/docs/grid'
         ],
       },
     ],

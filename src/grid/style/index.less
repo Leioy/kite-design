@@ -1,0 +1,77 @@
+@import "../../style/index";
+@import "../../style/variable";
+@import "./mixin";
+
+@row-prefix-cls: ~'@{prefixClass}-row';
+@col-prefix-cls: ~'@{prefixClass}-col';
+.@{row-prefix-cls} {
+  display: flex;
+  flex-flow: row wrap;
+  &::before,
+  &::after {
+    display: flex;
+  }
+}
+
+// x轴对齐
+.@{row-prefix-cls}-start {
+  justify-content: flex-start;
+}
+
+.@{row-prefix-cls}-center {
+  justify-content: center;
+}
+
+.@{row-prefix-cls}-end {
+  justify-content: flex-end;
+}
+
+.@{row-prefix-cls}-space-between {
+  justify-content: space-between;
+}
+
+.@{row-prefix-cls}-space-around {
+  justify-content: space-around;
+}
+
+//y轴对齐
+.@{row-prefix-cls}-top {
+  align-items: flex-start;
+}
+
+.@{row-prefix-cls}-middle {
+  align-items: center;
+}
+
+.@{row-prefix-cls}-bottom {
+  align-items: flex-end;
+}
+
+.@{col-prefix-cls} {
+  position: relative;
+  max-width: 100%;
+  min-height: 1px;
+}
+
+.make-grid();
+.make-grid(-xs);
+@media (min-width: @screen-sm) {
+  .make-grid(-sm);
+}
+
+@media (min-width: @screen-md) {
+  .make-grid(-md);
+}
+
+@media (min-width: @screen-lg) {
+  .make-grid(-lg);
+}
+
+@media (min-width: @screen-xl) {
+  .make-grid(-xl);
+}
+
+@media (min-width: @screen-xxl) {
+  .make-grid(-xxl);
+}
+

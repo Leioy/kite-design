@@ -1,5 +1,6 @@
 @import "button/style/index";
 @import "./layout/style/index";
+@import "./grid/style/index";
 
 .__dumi-default-layout-content {
   color: #fff;
@@ -34,6 +35,32 @@
     }
   }
   .kite-btn {
+    & + {
+      margin-right: 8px;
+    }
+  }
+  .kite-row {
+    > div {
+      min-height: 30px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      text-align: center;
+      &:not(.gutter-row) {
+        padding: 16px 0;
+        &:nth-child(odd) {
+          background: rgba(0, 146, 255, .75);
+        }
+        &:nth-child(even) {
+          background: #0092ff;
+        }
+      }
+    }
+  }
+  .tag {
+    border: 1px solid #91d5ff;
+    background: #e6f7ff;
+    color: #096dd9;
+    padding: 0 4px;
     & + {
       margin-right: 8px;
     }
