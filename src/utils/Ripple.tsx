@@ -1,6 +1,5 @@
 import React, { useState, useRef, useCallback } from 'react';
 import { useTransition, animated, config } from 'react-spring';
-import { ButtonColor, ButtonVariant } from '@/button/button';
 
 interface Coordinate {
   x: number;
@@ -37,35 +36,12 @@ const getRippleRadius = (origin: Coordinate, rect: ClientRect) => {
 };
 
 interface Props {
-  color: ButtonColor;
-  variant: ButtonVariant;
+  color: string;
 }
 
 const Ripple: React.FC<Props> = props => {
-  const { color, variant } = props;
-  const getRippleBackground = () => {
-    enum BackGround {
-      default = '#525050',
-      primary = '#1976d2',
-      secondary = '#dc004e',
-      success = '#18821c',
-      warning = '#d27e15',
-      danger = '#cc2b2b',
-    }
-
-    enum ContainedBackGround {
-      default = '#525050',
-      primary = '#fff',
-      secondary = '#fff',
-      success = '#fff',
-      warning = '#fff',
-      danger = '#fff',
-    }
-
-    return variant === 'contained'
-      ? ContainedBackGround[color]
-      : BackGround[color];
-  };
+  const { color } = props;
+  console.log('color', color);
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   const [{ x, y }, setPosition] = useState({ x: 0, y: 0 });
@@ -151,7 +127,7 @@ const Ripple: React.FC<Props> = props => {
               style={{
                 transformOrigin: '50% 50%',
                 position: 'absolute',
-                backgroundColor: getRippleBackground(),
+                backgroundColor: color,
                 borderRadius: '50%',
                 pointerEvents: 'none',
                 userSelect: 'none',

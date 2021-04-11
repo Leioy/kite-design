@@ -18,6 +18,34 @@ const ButtonColors = tuple(
   'warning',
   'danger',
 );
+
+const rippleColor = {
+  contained: {
+    default: '#525050',
+    primary: '#fff',
+    secondary: '#fff',
+    success: '#fff',
+    warning: '#fff',
+    danger: '#fff',
+  },
+  outlined: {
+    default: '#525050',
+    primary: '#1976d2',
+    secondary: '#dc004e',
+    success: '#18821c',
+    warning: '#d27e15',
+    danger: '#cc2b2b',
+  },
+  text: {
+    default: '#525050',
+    primary: '#1976d2',
+    secondary: '#dc004e',
+    success: '#18821c',
+    warning: '#d27e15',
+    danger: '#cc2b2b',
+  },
+};
+
 export type ButtonColor = typeof ButtonColors[number];
 const ButtonVariants = tuple('text', 'outlined', 'contained');
 export type ButtonVariant = typeof ButtonVariants[number];
@@ -61,7 +89,7 @@ const Button = React.forwardRef<HTMLButtonElement, NativeButtonProps>(
       onClick,
       ...rest
     } = props;
-    const [innerLoading, setLoading] = useState<Loading>(Boolean(loading));
+    const [ innerLoading, setLoading ] = useState<Loading>(Boolean(loading));
     const delayRef = useRef<number>();
     const prefixClass = getPrefixClass('btn');
     let sizeClass = '';
@@ -103,7 +131,7 @@ const Button = React.forwardRef<HTMLButtonElement, NativeButtonProps>(
       } else {
         setLoading(loadingOrDelay);
       }
-    }, [loadingOrDelay]);
+    }, [ loadingOrDelay ]);
 
     const iconNode =
       icon && !innerLoading ? (
@@ -125,7 +153,7 @@ const Button = React.forwardRef<HTMLButtonElement, NativeButtonProps>(
       >
         {iconNode}
         {children && <span>{children}</span>}
-        {!props.disabled && <Ripple color={color} variant={variant} />}
+        {!props.disabled && <Ripple color={rippleColor[variant][color]} />}
       </button>
     );
   },
