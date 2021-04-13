@@ -312,7 +312,7 @@ export default () => {
     {Object.entries(screens)
            .filter(screen => !!screen[1])
            .map(screen => (
-             <span className="tag" key={screen[0]}>
+             <span className="demo-tag" key={screen[0]}>
                {screen[0]}
              </span>
            ))}
