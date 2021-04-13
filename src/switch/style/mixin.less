@@ -1,0 +1,18 @@
+.make-color (@class; @color) {
+  &.@{class}-checked {
+    .@{class}-track {
+      background: @color;
+    }
+    .@{class}-circle {
+      background: @color;
+    }
+    &.@{class}-loading {
+      .@{class}-loading-icon {
+        color: #fff;
+      }
+    }
+  }
+  .@{class}-loading-icon {
+    color: @color;
+  }
+}

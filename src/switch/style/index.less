@@ -1,0 +1,107 @@
+@import "../../style/index";
+@import "../../style/variable";
+@import "./mixin";
+
+@switch-prefix-cls: ~'@{prefixClass}-switch';
+.@{switch-prefix-cls} {
+  display: inline-flex;
+  width: 58px;
+  height: 38px;
+  padding: 12px;
+  outline: none;
+  border: none;
+  position: relative;
+  vertical-align: middle;
+  z-index: 0;
+  cursor: pointer;
+  &-default {
+    .@{switch-prefix-cls}-loading-icon {
+      color: #colors[primary];
+    }
+  }
+  &-primary {
+    .make-color(@switch-prefix-cls; #colors[primary]);
+  }
+  &-secondary {
+    .make-color(@switch-prefix-cls; #colors[secondary]);
+  }
+  &-success {
+    .make-color(@switch-prefix-cls; #colors[success]);
+  }
+  &-warning {
+    .make-color(@switch-prefix-cls; #colors[warning]);
+  }
+  &-danger {
+    .make-color(@switch-prefix-cls; #colors[danger]);
+  }
+  &-checked {
+    .@{switch-prefix-cls}-button {
+      transform: translateX(20px);
+    }
+  }
+  &-track {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 7px;
+    background: @color-black;
+    opacity: .38;
+  }
+  &-button {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  }
+  &-circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: @color-white;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  }
+  &-disabled {
+    cursor: not-allowed;
+    user-select: none;
+    .@{switch-prefix-cls}-button {
+      cursor: not-allowed;
+      user-select: none;
+    }
+    .@{switch-prefix-cls}-track {
+      background: @color-disabled;
+    }
+  }
+  &-loading {
+    &-wrapper {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-size: 14px;
+    }
+  }
+  &-small {
+    width: 40px;
+    height: 24px;
+    padding: 7px;
+    .@{switch-prefix-cls}-button {
+      width: 24px;
+      height: 24px;
+      .@{switch-prefix-cls}-circle {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

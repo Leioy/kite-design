@@ -15,7 +15,8 @@ function getMenus (base = '/docs') {
         children: [
           '/docs/button',
           '/docs/layout',
-          '/docs/grid'
+          '/docs/grid',
+          '/docs/switch'
         ],
       },
     ],

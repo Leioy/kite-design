@@ -41,7 +41,6 @@ interface Props {
 
 const Ripple: React.FC<Props> = props => {
   const { color } = props;
-  console.log('color', color);
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
   const [{ x, y }, setPosition] = useState({ x: 0, y: 0 });

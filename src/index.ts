@@ -9,3 +9,6 @@ export type { RowProps } from './row';
 export { default as Row } from './row';
 
 export { default as Grid } from './grid';
+
+export type { SwitchProps } from './switch';
+export { default as Switch } from './switch';
