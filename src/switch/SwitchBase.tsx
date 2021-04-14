@@ -75,7 +75,7 @@ const SwitchBase = forwardRef<HTMLButtonElement, SwitchBaseProps>((props, ref) =
     onClick?.(result, e);
   };
   return (
-    <button className={switchClasses} {...rest} onClick={onInternalClick}>
+    <button ref={ref} className={switchClasses} {...rest} onClick={onInternalClick}>
       <span className={`${prefixClass}-track`} />
       <span className={`${prefixClass}-button`}>
         <span className={`${prefixClass}-circle`} >
