@@ -12,3 +12,5 @@ export { default as Grid } from './grid';
 
 export type { SwitchProps } from './switch';
 export { default as Switch } from './switch';
+
+export {default as Radio} from './radio'
