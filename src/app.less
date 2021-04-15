@@ -3,9 +3,13 @@
 @import "./grid/style/index";
 @import "./switch/style/index";
 @import "./radio/style/index";
+@import "./checkbox/style/index";
 
-.__dumi-default-layout-content {
-  //color: #fff;
+#grid-demo {
+  color: #fff;
+}
+#docs-layout-demo {
+  color: #fff;
   section + section {
     margin-top: 48px;
   }
@@ -28,19 +32,8 @@
       background-color: #2196f3;
     }
   }
-  .markdown {
-    table {
-      text-align: left;
-      tbody tr td:first-child {
-        color: #0069c0;
-      }
-    }
-  }
-  .kite-btn {
-    & + {
-      margin-right: 8px;
-    }
-  }
+}
+#grid-demo {
   .kite-row {
     > div {
       min-height: 30px;
@@ -56,6 +49,21 @@
           background: #0092ff;
         }
       }
+    }
+  }
+}
+.__dumi-default-layout-content {
+  .markdown {
+    table {
+      text-align: left;
+      tbody tr td:first-child {
+        color: #0069c0;
+      }
+    }
+  }
+  .kite-btn {
+    & + {
+      margin-right: 8px;
     }
   }
   .demo-tag {

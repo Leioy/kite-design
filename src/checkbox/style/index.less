@@ -1,0 +1,75 @@
+@import "../../style/index";
+@import "../../style/variable";
+
+@checkbox-prefix-cls: ~'@{prefixClass}-checkbox';
+.@{checkbox-prefix-cls} {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  &-checked {
+    .@{checkbox-prefix-cls}-icon-square {
+      opacity: 0;
+    }
+    .@{checkbox-prefix-cls}-icon-check {
+      opacity: 1;
+    }
+  }
+  &-indeterminate {
+    .@{checkbox-prefix-cls}-icon-square {
+      opacity: 0;
+    }
+    .@{checkbox-prefix-cls}-icon-indeterminate {
+      opacity: 1;
+    }
+  }
+  &-wrapper {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &-disabled {
+      cursor: not-allowed;
+    }
+  }
+  &-input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  &-inner {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &-box {
+    position: relative;
+    width: 16px;
+    height: 16px;
+  }
+}
+.@{prefixClass}icon {
+  position: absolute;
+  transition: all .2s;
+}
+.@{checkbox-prefix-cls}-icon-square {
+  color: #colors[default-heavy];
+}
+.@{checkbox-prefix-cls}-icon-check {
+  opacity: 0;
+  color: #colors[primary];
+}
+.@{checkbox-prefix-cls}-icon-indeterminate {
+  opacity: 0;
+  color: #colors[primary];
+}

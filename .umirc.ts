@@ -17,7 +17,8 @@ function getMenus (base = '/docs') {
           '/docs/layout',
           '/docs/grid',
           '/docs/switch',
-          '/docs/radio'
+          '/docs/radio',
+          '/docs/checkbox'
         ],
       },
     ],

@@ -16,7 +16,7 @@
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
   "dependencies": {
-    "@kite-design/icons-react": "^0.0.3-alpha.0",
+    "@kite-design/icons-react": "^0.0.3",
     "clsx": "^1.1.1",
     "enquire.js": "^2.1.6",
     "react": "^16.12.0",
