@@ -13,7 +13,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: 'antdv.css',
+      filename: 'app.css',
     }),
   ],
   mode: 'production',
@@ -31,7 +31,9 @@ module.exports = {
           {
             loader: 'less-loader', // compiles Less to CSS
             options: {
-              javascriptEnabled: true
+              lessOptions:{
+                javascriptEnabled: true
+              }
             }
           },
         ],
