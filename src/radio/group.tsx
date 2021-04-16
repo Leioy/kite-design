@@ -1,8 +1,8 @@
 import React, { forwardRef } from 'react';
-import RadioGroupContext from '@/radio/RadioGroupContext';
-import { RadioChangeEvent, RadioGroupProps } from '@/radio/interface';
-import { getPrefixClass } from '@/utils/getPrefixClass';
-import useControlledValue from '@/switch/hooks/useControlledValue';
+import RadioGroupContext from './RadioGroupContext';
+import { RadioChangeEvent, RadioGroupProps } from './interface';
+import { getPrefixClass } from '../utils/getPrefixClass';
+import useControlledValue from '../switch/hooks/useControlledValue';
 import clsx from 'clsx';
 
 const RadioGroup = forwardRef<HTMLDivElement, RadioGroupProps>((props, ref) => {

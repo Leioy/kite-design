@@ -1,6 +1,6 @@
 import React, { createContext, HTMLAttributes, useState } from 'react';
-import { tuple } from '@/utils/type';
-import { getPrefixClass } from '@/utils/getPrefixClass';
+import { tuple } from '../utils/type';
+import { getPrefixClass } from '../utils/getPrefixClass';
 import clsx from 'clsx';
 
 export interface ILayoutContextProps {

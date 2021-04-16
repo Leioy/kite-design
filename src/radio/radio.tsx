@@ -1,8 +1,8 @@
 import React, { forwardRef, useContext } from 'react';
-import { RadioChangeEvent, RadioProps } from '@/radio/interface';
-import { getPrefixClass } from '@/utils/getPrefixClass';
-import RadioGroupContext from '@/radio/RadioGroupContext';
-import RadioBase from '@/radio/RadioBase';
+import { RadioChangeEvent, RadioProps } from './interface';
+import { getPrefixClass } from '../utils/getPrefixClass';
+import RadioGroupContext from './RadioGroupContext';
+import RadioBase from './RadioBase';
 
 const Radio = forwardRef<HTMLInputElement, RadioProps>((props, ref) => {
   const { className, children, style, ...rest } = props;

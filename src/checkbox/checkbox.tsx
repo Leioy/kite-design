@@ -1,7 +1,7 @@
 import React, { ForwardRefRenderFunction, useContext, useEffect, useRef } from 'react';
-import { CheckboxProps } from '@/checkbox/interface';
-import { getPrefixClass } from '@/utils/getPrefixClass';
-import { GroupContext } from '@/checkbox/CheckboxGroupContext';
+import { CheckboxProps } from './interface';
+import { getPrefixClass } from '../utils/getPrefixClass';
+import { GroupContext } from './CheckboxGroupContext';
 import clsx from 'clsx';
 import CheckboxBase from './CheckboxBase';
 import { CheckboxSquare, CheckboxCheck, CheckboxIndeterminate } from '@kite-design/icons-react';

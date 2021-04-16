@@ -1,8 +1,8 @@
 import React, { HTMLAttributes, useContext, useEffect, useRef } from 'react';
-import { tuple } from '@/utils/type';
+import { tuple } from '../utils/type';
 import clsx from 'clsx';
-import { getPrefixClass } from '@/utils/getPrefixClass';
-import { LayoutContext } from '@/layout/layout';
+import { getPrefixClass } from '../utils/getPrefixClass';
+import { LayoutContext } from './layout';
 
 if (typeof window !== undefined) {
   const matchMediaPolyfill = (mediaQuery: string) => {

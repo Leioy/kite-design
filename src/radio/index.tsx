@@ -4,6 +4,8 @@ import InternalRadio from './radio';
 import Group from './group';
 import { RadioProps } from './interface';
 
+export { RadioProps, RadioChangeEvent, RadioChangeEventTarget, RadioGroupProps, RadioContextProps } from './interface';
+
 interface ComputedComponent extends React.ForwardRefExoticComponent<RadioProps & React.RefAttributes<HTMLElement>> {
   Group: typeof Group
 }

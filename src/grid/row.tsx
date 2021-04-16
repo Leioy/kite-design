@@ -1,9 +1,9 @@
 import React, { CSSProperties, HTMLAttributes, useEffect, useRef, useState } from 'react';
-import { tuple } from '@/utils/type';
-import { getPrefixClass } from '@/utils/getPrefixClass';
+import { tuple } from '../utils/type';
+import { getPrefixClass } from '../utils/getPrefixClass';
 import clsx from 'clsx';
-import RowContext from '@/grid/RowContext';
-import ResponsiveObserve, { Breakpoint, ScreenMap, responsiveArray } from '@/utils/responsiveObserve';
+import RowContext from './RowContext';
+import ResponsiveObserve, { Breakpoint, ScreenMap, responsiveArray } from '../utils/responsiveObserve';
 
 const RowAligns = tuple('top', 'middle', 'bottom');
 const RowJustify = tuple('start', 'end', 'center', 'space-around', 'space-between');

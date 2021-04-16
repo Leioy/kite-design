@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Checkbox from '@/checkbox/checkbox';
-import { CheckboxGroupProps, CheckboxOptionType, CheckboxValueType } from '@/checkbox/interface';
-import { getPrefixClass } from '@/utils/getPrefixClass';
-import omit from '@/utils/omit';
+import Checkbox from './checkbox';
+import { CheckboxGroupProps, CheckboxOptionType, CheckboxValueType } from './interface';
+import { getPrefixClass } from '../utils/getPrefixClass';
+import omit from '../utils/omit';
 import clsx from 'clsx';
-import { GroupContext } from '@/checkbox/CheckboxGroupContext';
+import { GroupContext } from './CheckboxGroupContext';
 
 const CheckboxGroup: React.FC<CheckboxGroupProps> = (props) => {
   const { defaultValue, children, options = [], className, style, onChange, ...rest } = props;

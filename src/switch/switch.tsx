@@ -1,6 +1,6 @@
 import React, { CSSProperties, forwardRef } from 'react';
-import { getPrefixClass } from '@/utils/getPrefixClass';
-import SwitchBase, { SwitchChangeHandler, SwitchClickHandler, SwitchColor, SwitchSize } from '@/switch/SwitchBase';
+import { getPrefixClass } from '../utils/getPrefixClass';
+import SwitchBase, { SwitchChangeHandler, SwitchClickHandler, SwitchColor, SwitchSize } from './SwitchBase';
 import clsx from 'clsx';
 import { Loading } from '@kite-design/icons-react';
 

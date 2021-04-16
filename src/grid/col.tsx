@@ -1,6 +1,6 @@
 import React, { CSSProperties, useContext } from 'react';
-import RowContext from '@/grid/RowContext';
-import { getPrefixClass } from '@/utils/getPrefixClass';
+import RowContext from './RowContext';
+import { getPrefixClass } from '../utils/getPrefixClass';
 import clsx from 'clsx';
 
 type ColSpanType = number | string

@@ -4,8 +4,8 @@ import React, {
   useState,
 } from 'react';
 import clsx from 'clsx';
-import { CheckboxChangeEvent } from '@/checkbox/interface';
-import Ripple from '@/utils/Ripple';
+import { CheckboxChangeEvent } from './interface';
+import Ripple from '../utils/Ripple';
 
 export interface CheckBoxBase extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
   prefixCls?: string,

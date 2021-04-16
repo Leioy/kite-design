@@ -1,8 +1,8 @@
 import React, { CSSProperties, forwardRef, HTMLAttributes } from 'react';
 import clsx from 'clsx';
-import Ripple from '@/utils/Ripple';
-import useControlledValue from '@/switch/hooks/useControlledValue';
-import { tuple } from '@/utils/type';
+import Ripple from '../utils/Ripple';
+import useControlledValue from './hooks/useControlledValue';
+import { tuple } from '../utils/type';
 
 const SwitchColors = tuple('default', 'primary', 'secondary', 'success', 'warning', 'danger');
 export type SwitchColor = typeof SwitchColors[number]

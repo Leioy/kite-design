@@ -4,8 +4,8 @@ import React, {
   useState,
 } from 'react';
 import clsx from 'clsx';
-import { RadioChangeEvent } from '@/radio/interface';
-import Ripple from '@/utils/Ripple';
+import { RadioChangeEvent } from './interface';
+import Ripple from '../utils/Ripple';
 
 export interface RadioBase extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
   prefixCls?: string,

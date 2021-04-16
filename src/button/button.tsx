@@ -4,11 +4,11 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { tuple } from '@/utils/type';
-import { getPrefixClass } from '@/utils/getPrefixClass';
+import { tuple } from '../utils/type';
+import { getPrefixClass } from '../utils/getPrefixClass';
 import clsx from 'clsx';
-import Ripple from '@/utils/Ripple';
-import LoadingIcon from '@/button/LoadingIcon';
+import Ripple from '../utils/Ripple';
+import LoadingIcon from './LoadingIcon';
 
 const ButtonColors = tuple(
   'default',
