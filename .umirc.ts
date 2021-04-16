@@ -11,8 +11,9 @@ function getMenus (base = '/docs') {
         ],
       },
       {
-        title: '通用',
+        title: '组件',
         children: [
+          '/docs/icon',
           '/docs/button',
           '/docs/layout',
           '/docs/grid',
@@ -35,10 +36,13 @@ export default defineConfig({
     '/docs':getMenus()
   },
   navs: [
-    null,
     {
-      title: '百度',
-      path: 'https://baidu.com',
+      title:"文档",
+      path:'/docs'
+    },
+    {
+      title: 'GitHub',
+      path: 'https://github.com/Leioy/kite-design',
     },
   ],
   // more config: https://d.umijs.org/config

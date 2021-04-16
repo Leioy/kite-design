@@ -1,5 +1,10 @@
 # icon 图标
 
+语义化的矢量图形。使用图标组件，你需要安装 @kite-design/icons-react 图标组件包：
+```bash
+yarn add @kite-design/icons-react
+```
+
 ## 图标列表
 
 <code src="../demo/icon-demo.tsx" inline></code>
@@ -52,7 +57,7 @@ import { createFromIconfontCN } from '@kite-design/icons-react'
 const MyIcon = createFromIconfontCN({
   scriptUrl: '//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js',
   extraCommonProps: {
-    testProps: 'test',
+    name: 'iconfont',
   },
 })
 export default () => (
