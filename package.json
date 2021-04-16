@@ -1,6 +1,6 @@
 {
   "name": "kite-design",
-  "version": "0.0.3-beta",
+  "version": "0.0.3-alpha",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -18,7 +18,8 @@
   "typings": "lib/index.d.ts",
   "files": [
     "lib",
-    "es"
+    "es",
+    "dist"
   ],
   "peerDependencies": {
     "react": "^17.0.0",
