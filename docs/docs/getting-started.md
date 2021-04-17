@@ -118,7 +118,7 @@ module.exports = function override(config, env) {
 [babel-plugin-import](https://github.com/ant-design/babel-plugin-import) 是一个用于按需加载组件代码和样式的 babel 插件（[原理](/docs/react/getting-started#按需加载)），现在我们尝试安装它并修改 `config-overrides.js` 文件。
 
 ```bash
-$ yarn add babel-plugin-import
+$ yarn add -D babel-plugin-import
 ```
 
 ```diff
@@ -137,7 +137,7 @@ $ yarn add babel-plugin-import
 + );
 ```
 
-然后移除前面在 `src/App.css` 里全量添加的 `@import '~tyche-ui/dist/tyche.css';` 样式代码
+然后移除前面在 `src/App.css` 里全量添加的 `@import '~kite-design/dist/app.css';` 样式代码
 
 
 最后重启 `yarn start` 访问页面，kite-design 组件的 js 和 css 代码都会按需加载。
